@@ -2,6 +2,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const cors = require('cors');
+
+const productsRoute = require('./routes/products');
+const postsRoute = require('./routes/posts');
 const productsData = require('./productsData.js');
 
 app.use(express.json())
