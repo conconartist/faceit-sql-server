@@ -2,7 +2,7 @@
   "name": "faceit-sql-server",
   "version": "1.0.0",
   "description": "6/17/21- Install npm package for MySQL 2",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
