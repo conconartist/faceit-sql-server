@@ -7,8 +7,10 @@ router.use((req, res, next) => {
     next();
 })
 
-router.get('/', (req, res) => {
-    res.send(200);
+router.get('/', async (req, res) => {
+    const results = await db.promise().query(`SELECT * FROM PRODUCTS`);
+    res.status(200).send(results[0]);
+
 });
 
 router.get('/posts', (req, res) => {
