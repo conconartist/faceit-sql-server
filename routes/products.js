@@ -23,17 +23,34 @@ router.get('/posts', (req, res) => {
 router.post('/', [ 
     check('brand').notEmpty().withMessage('Brand cannot be empty.'),
     check('name').notEmpty().withMessage('Name cannot be empty.'),
+    check('category').notEmpty().withMessage('Category cannot be empty.'),
+    check('product_type').notEmpty().withMessage('Product Type cannot be empty.')
   ], (req, res) => {
 
     const errors = validationResult(req);
     if(!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { brand, name } = req.body;
+
+    const { 
+      brand, 
+      name, 
+      price, 
+      price_sign, 
+      currency, 
+      image_link, 
+      product_link, 
+      website_link, 
+      description, 
+      rating, 
+      category, 
+      product_type } = req.body;
     if(brand && name) {
       console.log(brand, name)
       try {
-        db.promise().query(`INSERT INTO PRODUCTS VALUES(NULL, '${brand}', '${name}')`);
+        db.promise().query(
+          `INSERT INTO PRODUCTS VALUES(NULL, '${brand}', '${name}', '${price}', '${price_sign}', '${currency}', '${image_link}', '${product_link}', '${website_link}', '${description}', '${rating}', '${category}', '${product_type}')`
+        );
         res.status(201).send({ msg: 'Created Product' });
       }
       catch (err) {
@@ -48,7 +65,7 @@ router.post('/', [
 //         brand, 
 //         name, 
 //         price, 
-//         price_sign, 
+//         price_sign, -- error message if string is more than one character
 //         currency, 
 //         image_link, 
 //         product_link, 
