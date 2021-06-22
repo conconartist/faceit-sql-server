@@ -24,6 +24,9 @@ router.post('/', [
     check('brand').notEmpty().withMessage('Brand cannot be empty.'),
     check('brand').isLowercase().withMessage('Brand must be in lowercase letters.'),
     check('name').notEmpty().withMessage('Name cannot be empty.'),
+    check('image_link').isURL().withMessage('Image Link needs a valid URL address.'),
+    check('product_link').isURL().withMessage('Product Link needs a valid URL address.'),
+    check('website_link').isURL().withMessage('Website Link needs a valid URL address.'),
     check('product_type').notEmpty().withMessage('Product Type cannot be empty.'),
     check('cruelty_free').isBoolean().withMessage('Cruelty Free value must be true or false.'),
     check('fair_trade').isBoolean().withMessage('Fair Trade value must be true or false.'),
@@ -74,7 +77,7 @@ router.post('/', [
 //         brand, 
 //         name, 
 //         price, 
-//         price_sign, -- error message if string is more than one character
+//         price_sign, 
 //         currency, 
 //         image_link, 
 //         product_link, 
