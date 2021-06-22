@@ -28,16 +28,7 @@ app.locals.products = productsData;
 
 app.get('/', (request, response) => {
     return response.status(200).json(app.locals.products)
-    // response.send({
-    //     msg: 'Hello',
-    //     product: {}
-    // })
 })
 
-// app.set('port', process.env.PORT || 3307);
-
-// app.listen(app.get('port'), () => {
-//     console.log(`Now listening on port ${app.get('port')}!`)
-// })
 
 

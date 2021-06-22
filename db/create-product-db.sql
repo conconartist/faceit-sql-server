@@ -11,6 +11,10 @@ CREATE TABLE products (
     product_link VARCHAR(1000), 
     website_link VARCHAR(1000), 
     description VARCHAR(10000), 
-    rating DECIMAL(4,1), 
-    category VARCHAR(50) NOT NULL, 
-    product_type VARCHAR(50) NOT NULL);
+    product_type VARCHAR(50) NOT NULL, 
+    cruelty_free BOOLEAN,
+    fair_trade BOOLEAN,
+    organic BOOLEAN, 
+    vegan BOOLEAN,
+    zero_waste BOOLEAN
+    )
