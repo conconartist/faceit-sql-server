@@ -71,8 +71,7 @@ router.post('/', [
 //         product_link, 
 //         website_link, 
 //         description, 
-//         rating, 
-//         category, 
+//         rating,  
 //         product_type, 
 //         tag_list
 //     } = request.body;
