@@ -22,13 +22,14 @@ router.get('/posts', (req, res) => {
 
 router.post('/', [ 
     check('brand').notEmpty().withMessage('Brand cannot be empty.'),
+    check('brand').isLowercase().withMessage('Brand must be in lowercase letters.'),
     check('name').notEmpty().withMessage('Name cannot be empty.'),
     check('product_type').notEmpty().withMessage('Product Type cannot be empty.'),
-    check('cruelty_free').notEmpty().withMessage('Cruelty Free value must be true or false.'),
-    check('fair_trade').notEmpty().withMessage('Fair Trade value must be true or false.'),
-    check('organic').notEmpty().withMessage('Organic value must be true or false.'),
-    check('vegan').notEmpty().withMessage('Vegan value must be true or false.'),
-    check('zero_waste').notEmpty().withMessage('Zero Waste value must be true or false.')
+    check('cruelty_free').isBoolean().withMessage('Cruelty Free value must be true or false.'),
+    check('fair_trade').isBoolean().withMessage('Fair Trade value must be true or false.'),
+    check('organic').isBoolean().withMessage('Organic value must be true or false.'),
+    check('vegan').isBoolean().withMessage('Vegan value must be true or false.'),
+    check('zero_waste').isBoolean().withMessage('Zero Waste value must be true or false.')
   ], (req, res) => {
 
     const errors = validationResult(req);
