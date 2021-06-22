@@ -23,8 +23,12 @@ router.get('/posts', (req, res) => {
 router.post('/', [ 
     check('brand').notEmpty().withMessage('Brand cannot be empty.'),
     check('name').notEmpty().withMessage('Name cannot be empty.'),
-    check('category').notEmpty().withMessage('Category cannot be empty.'),
-    check('product_type').notEmpty().withMessage('Product Type cannot be empty.')
+    check('product_type').notEmpty().withMessage('Product Type cannot be empty.'),
+    check('cruelty_free').notEmpty().withMessage('Cruelty Free value must be true or false.'),
+    check('fair_trade').notEmpty().withMessage('Fair Trade value must be true or false.'),
+    check('organic').notEmpty().withMessage('Organic value must be true or false.'),
+    check('vegan').notEmpty().withMessage('Vegan value must be true or false.'),
+    check('zero_waste').notEmpty().withMessage('Zero Waste value must be true or false.')
   ], (req, res) => {
 
     const errors = validationResult(req);
@@ -42,14 +46,18 @@ router.post('/', [
       product_link, 
       website_link, 
       description, 
-      rating, 
-      category, 
-      product_type } = req.body;
+      product_type,
+      cruelty_free,
+      fair_trade,
+      organic,
+      vegan,
+      zero_waste 
+    } = req.body;
     if(brand && name) {
       console.log(brand, name)
       try {
         db.promise().query(
-          `INSERT INTO PRODUCTS VALUES(NULL, '${brand}', '${name}', '${price}', '${price_sign}', '${currency}', '${image_link}', '${product_link}', '${website_link}', '${description}', '${rating}', '${category}', '${product_type}')`
+          `INSERT INTO PRODUCTS VALUES(NULL, '${brand}', '${name}', '${price}', '${price_sign}', '${currency}', '${image_link}', '${product_link}', '${website_link}', '${description}', '${product_type}', '${cruelty_free}', '${fair_trade}', '${organic}', '${vegan}', '${zero_waste}')`
         );
         res.status(201).send({ msg: 'Created Product' });
       }
