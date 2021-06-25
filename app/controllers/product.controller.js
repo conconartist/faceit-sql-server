@@ -113,24 +113,3 @@ exports.deleteAll = (req, res) => {
       else res.send({ message: `All products were deleted successfully.`})
   });
 };
-
-
-// router.post('/', [ 
-//     check('brand').notEmpty().withMessage('Brand cannot be empty.'),
-//     check('brand').isLowercase().withMessage('Brand must be in lowercase letters.'),
-//     check('name').notEmpty().withMessage('Name cannot be empty.'),
-//     check('image_link').isURL().withMessage('Image Link needs a valid URL address.'),
-//     check('product_link').isURL().withMessage('Product Link needs a valid URL address.'),
-//     check('website_link').isURL().withMessage('Website Link needs a valid URL address.'),
-//     check('product_type').notEmpty().withMessage('Product Type cannot be empty.'),
-//     check('cruelty_free').isBoolean().withMessage('Cruelty Free value must be true or false.'),
-//     check('fair_trade').isBoolean().withMessage('Fair Trade value must be true or false.'),
-//     check('organic').isBoolean().withMessage('Organic value must be true or false.'),
-//     check('vegan').isBoolean().withMessage('Vegan value must be true or false.'),
-//     check('zero_waste').isBoolean().withMessage('Zero Waste value must be true or false.')
-//   ], (req, res) => {
-
-//     const errors = validationResult(req);
-//     if(!errors.isEmpty()) {
-//       return res.status(400).json({ errors: errors.array() });
-//     }

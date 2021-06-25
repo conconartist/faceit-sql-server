@@ -16,11 +16,6 @@ app.listen(3000, () => {
     console.log(`Now listening on port 3000!`)
 })
 
-// app.locals.products = productsData;
-
-// app.get('/', (request, response) => {
-//     return response.status(200).json(app.locals.products)
-// })
 
 
 
