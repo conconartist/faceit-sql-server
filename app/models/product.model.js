@@ -1,8 +1,8 @@
-const { Router } = require('express');
+// const { Router } = require('express');
 const db = require('../database')
 
 const { check, validationResult } = require('express-validator');
-const productsData = require('../productsData');
+const productsData = require('../../productsData');
 
 const Product = function(product) {
   this.brand = product.brand; 
