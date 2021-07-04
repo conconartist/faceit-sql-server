@@ -837,8 +837,7 @@ const productsData = [
       image_link: 'https://d13wriz42ny3t5.cloudfront.net/production/2021/04/16114520/Fat-and-the-moon-Earth-Mineral-Eye-Coal-Eyeliner-NEW-1.jpg',
       product_link: 'https://earthhero.com/products/beauty-care/fat-and-the-moon-earth-mineral-eye-coal-eyeliner/',
       website_link: 'https://earthhero.com/product-category/beauty-care/makeup/',
-      description: 'Create that smoky eye with ease thanks to the Earth Mineral Eye Coal from Fat and the Moon! Made from non-toxic and organic ingredients like sunflower oil, beeswax, and kaolin clay, this eye coal can be used as a eye shadow or eye liner. The sunflower oil sinks into your skin letting the pigment stay in place without budging. To use, grab a makeup brush and apply, or use a clean finger for eyeliner on the waterline.\n' +
-        '\n',
+      description: 'Create that smoky eye with ease thanks to the Earth Mineral Eye Coal from Fat and the Moon! Made from non-toxic and organic ingredients like sunflower oil, beeswax, and kaolin clay, this eye coal can be used as a eye shadow or eye liner. The sunflower oil sinks into your skin letting the pigment stay in place without budging. To use, grab a makeup brush and apply, or use a clean finger for eyeliner on the waterline.',
       product_type: 'eyeliner',
       cruelty_free: 0,
       fair_trade: 0,
