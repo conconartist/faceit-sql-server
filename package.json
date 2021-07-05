@@ -4,6 +4,8 @@
   "description": "6/17/21- Install npm package for MySQL 2",
   "main": "server.js",
   "scripts": {
+    "build": "bower install && grunt build",
+    "start": "nf start",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
