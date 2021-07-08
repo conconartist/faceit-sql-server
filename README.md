@@ -1,9 +1,10 @@
 # faceit-sql-server
 
 This API is to be used with this version of the FaceIt application: https://github.com/conconartist/face-it
+Deployed Site: https://face-it-blue.vercel.app/
 
+This server is deployed on heroku: https://faceit-server.herokuapp.com/
 
-Deployed on heroku: https://faceit-server.herokuapp.com/
 
 **Endpoints:**
 
